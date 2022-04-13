@@ -1,1 +1,1 @@
-from .GhClient import GhClient
+from .gh_client import GhClient

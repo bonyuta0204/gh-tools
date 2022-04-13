@@ -31,5 +31,5 @@ class PrCommentsExporter():
                 'id': comment.id,
                 'url': comment.html_url,
                 'body': comment.body,
-                'user_name': comment.user.login
+                'user_name': (comment.user and comment.user.login) or ''
             })

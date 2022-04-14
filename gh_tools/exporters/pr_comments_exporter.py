@@ -21,7 +21,7 @@ class PrCommentsExporter():
         @see: https://docs.github.com/en/rest/reference/pulls#review-comments
         """
 
-        fieldnames = ['id', 'url', 'body', 'user_name']
+        fieldnames = ['id', 'url', 'body', 'user_name', 'created_at']
         writer = csv.DictWriter(sys.stdout, fieldnames=fieldnames)
 
         writer.writeheader()
@@ -31,5 +31,6 @@ class PrCommentsExporter():
                 'id': comment.id,
                 'url': comment.html_url,
                 'body': comment.body,
+                'created_at': comment.created_at,
                 'user_name': (comment.user and comment.user.login) or ''
             })

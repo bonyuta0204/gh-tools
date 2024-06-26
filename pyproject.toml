@@ -1,3 +1,16 @@
+[tool.poetry]
+name = "gh-tools"
+version = "0.1.0"
+description = ""
+authors = ["Yuta Nakamura"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+typer = "^0.12.3"
+pygithub = "^2.3.0"
+
+
 [build-system]
-requires = ["setuptools", "wheel"]
-build-backend = "setuptools.build_meta"
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
